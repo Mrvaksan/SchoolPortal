@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.app.schoolportal.MainFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_StudentLoginFragment"
+            app:destination="@id/LoginFragment" >
+            <argument
+                android:name="loginType"
+                android:defaultValue="1" />
+        </action>
+        <action
+            android:id="@+id/action_MainFragment_to_TeacherLoginFragment"
+            app:destination="@id/LoginFragment" >
+            <argument
+                android:name="loginType"
+                android:defaultValue="2" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.app.schoolportal.LoginFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_StudentFragment"
+            app:destination="@id/StudentFragment" />
+        <argument
+            android:name="loginType"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/StudentFragment"
+        android:name="com.app.schoolportal.StudentFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_student">
+
+        <action
+            android:id="@+id/action_StudentFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/action_StudentFragment_to_transcriptFragment"
+            app:destination="@id/transcriptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transcriptFragment"
+        android:name="com.app.schoolportal.TranscriptFragment"
+        android:label="fragment_transcript"
+        tools:layout="@layout/fragment_transcript" />
+</navigation>
