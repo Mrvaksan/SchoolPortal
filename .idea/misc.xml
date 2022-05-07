@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/content_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_arrangement.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_grade.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_login.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_nonattendance.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_student.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_student_information.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_teacher.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/layout/fragment_transcript.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/SchoolPortal/app/src/main/res/menu/menu_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3541666666666667" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3541666666666667" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25" />

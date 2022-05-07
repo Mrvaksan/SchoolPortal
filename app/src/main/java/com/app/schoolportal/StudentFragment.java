@@ -29,7 +29,7 @@ public class StudentFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(StudentFragment.this)
-                        .navigate(R.id.action_StudentFragment_to_transcriptFragment);
+                        .navigate(R.id.action_StudentFragment_to_TranscriptFragment);
             }
         });
 

@@ -35,5 +35,24 @@ public class School {
         return null;
     }
 
+    public Teacher getTeacherByCredentials(int id, String password){
+        for (int i = 0; i < teacherCount; i++) {
+            if (id == teachersList[i].t_id && password.equals(teachersList[i].t_password)) {
+                return teachersList[i];
+            }
+        }
+
+        return null;
+    }
+
+    public Student getStudentByNumbers(int id){
+        for (int i = 0; i < studentCount; i++) {
+            if (id == studentsList[i].s_id) {
+                return studentsList[i];
+            }
+        }
+
+        return null;
+    }
 
 }

@@ -19,7 +19,7 @@
             android:text="Kullanıcı adı" />
 
         <EditText
-            android:id="@+id/editTextUsername"
+            android:id="@+id/editTextUserName"
             android:layout_width="196dp"
             android:layout_height="48dp"
             android:layout_marginBottom="20dp"

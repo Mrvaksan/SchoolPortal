@@ -8,19 +8,19 @@
     <fragment
         android:id="@+id/MainFragment"
         android:name="com.app.schoolportal.MainFragment"
-        android:label="@string/first_fragment_label"
+        android:label="School Portal"
         tools:layout="@layout/fragment_main">
 
         <action
             android:id="@+id/action_MainFragment_to_StudentLoginFragment"
-            app:destination="@id/LoginFragment" >
+            app:destination="@id/LoginFragment">
             <argument
                 android:name="loginType"
                 android:defaultValue="1" />
         </action>
         <action
             android:id="@+id/action_MainFragment_to_TeacherLoginFragment"
-            app:destination="@id/LoginFragment" >
+            app:destination="@id/LoginFragment">
             <argument
                 android:name="loginType"
                 android:defaultValue="2" />
@@ -42,6 +42,9 @@
             android:name="loginType"
             app:argType="integer"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/action_LoginFragment_to_TeacherFragment"
+            app:destination="@id/TeacherFragment" />
     </fragment>
     <fragment
         android:id="@+id/StudentFragment"
@@ -53,12 +56,69 @@
             android:id="@+id/action_StudentFragment_to_MainFragment"
             app:destination="@id/MainFragment" />
         <action
-            android:id="@+id/action_StudentFragment_to_transcriptFragment"
-            app:destination="@id/transcriptFragment" />
+            android:id="@+id/action_StudentFragment_to_TranscriptFragment"
+            app:destination="@id/TranscriptFragment" />
     </fragment>
     <fragment
-        android:id="@+id/transcriptFragment"
+        android:id="@+id/TranscriptFragment"
         android:name="com.app.schoolportal.TranscriptFragment"
         android:label="fragment_transcript"
         tools:layout="@layout/fragment_transcript" />
+    <fragment
+        android:id="@+id/TeacherFragment"
+        android:name="com.app.schoolportal.TeacherFragment"
+        android:label="fragment_teacher"
+        tools:layout="@layout/fragment_teacher" >
+        <action
+            android:id="@+id/action_TeacherFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/action_TeacherFragment_to_StudentInformationFragment"
+            app:destination="@id/StudentInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StudentInformationFragment"
+        android:name="com.app.schoolportal.StudentInformationFragment"
+        android:label="fragment_student_information"
+        tools:layout="@layout/fragment_student_information" >
+        <action
+            android:id="@+id/action_StudentInformationFragment_to_ArrangementFragment"
+            app:destination="@id/ArrangementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ArrangementFragment"
+        android:name="com.app.schoolportal.ArrangementFragment"
+        android:label="fragment_arrangement"
+        tools:layout="@layout/fragment_arrangement" >
+        <action
+            android:id="@+id/action_ArrangementFragment_to_TeacherFragment"
+            app:destination="@id/TeacherFragment" />
+        <action
+            android:id="@+id/action_ArrangementFragment_to_GradeFragment"
+            app:destination="@id/GradeFragment" />
+        <action
+            android:id="@+id/action_ArrangementFragment_to_NonAttendanceFragment"
+            app:destination="@id/NonAttendanceFragment" />
+        <action
+            android:id="@+id/action_ArrangementFragment_to_TranscriptFragment"
+            app:destination="@id/TranscriptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GradeFragment"
+        android:name="com.app.schoolportal.GradeFragment"
+        android:label="fragment_grade"
+        tools:layout="@layout/fragment_grade" >
+        <action
+            android:id="@+id/action_GradeFragment_to_ArrangementFragment"
+            app:destination="@id/ArrangementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NonAttendanceFragment"
+        android:name="com.app.schoolportal.NonAttendanceFragment"
+        android:label="fragment_nonattendance"
+        tools:layout="@layout/fragment_nonattendance" >
+        <action
+            android:id="@+id/action_NonAttendanceFragment_to_ArrangementFragment"
+            app:destination="@id/ArrangementFragment" />
+    </fragment>
 </navigation>

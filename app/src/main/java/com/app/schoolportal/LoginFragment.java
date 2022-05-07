@@ -51,7 +51,7 @@ public class LoginFragment extends Fragment {
                 int id;
                 String password;
 
-                id=Integer.parseInt(binding.editTextUsername.getText().toString());
+                id=Integer.parseInt(binding.editTextUserName.getText().toString());
                 password=binding.editTextPassword.getText().toString();
 
                 if(loginType==1){
@@ -67,25 +67,20 @@ public class LoginFragment extends Fragment {
                     }
                 }else if(loginType==2){
                     Teacher teacher;
-                    //TODO teacher = Portal.getCurrentSchool().getTeacherByCredentials(id,password);
+                    teacher = Portal.getCurrentSchool().getTeacherByCredentials(id,password);
 
-                    /*
-                        if(teacher!=null){
-                        //TODO Portal.setCurrentTeacher(teacher);
-                        //TODO NavHostFragment.findNavController(LoginFragment.this)
-                        //        .navigate(R.id.action_LoginFragment_to_TeacherFragment);
+                    if(teacher!=null){
+                        Portal.setCurrentTeacher(teacher);
+                        NavHostFragment.findNavController(LoginFragment.this)
+                                .navigate(R.id.action_LoginFragment_to_TeacherFragment);
                     }else {
                         Snackbar.make(view,"Kullanıcı bulunamadı",Snackbar.LENGTH_SHORT).show();
                     }
-                     */
 
                 }
 
-
             }
         });
-
-
 
     }
 
