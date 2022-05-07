@@ -1,25 +1,14 @@
 package com.app.schoolportal;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.app.schoolportal.databinding.ActivityMainBinding;
 import com.app.schoolportal.databinding.FragmentLoginBinding;
 import com.app.schoolportal.logic.Portal;
 import com.app.schoolportal.logic.Student;
@@ -51,30 +40,30 @@ public class LoginFragment extends Fragment {
                 int id;
                 String password;
 
-                id=Integer.parseInt(binding.editTextUserName.getText().toString());
-                password=binding.editTextPassword.getText().toString();
+                id = Integer.parseInt(binding.editTextUserName.getText().toString());
+                password = binding.editTextPassword.getText().toString();
 
-                if(loginType==1){
+                if (loginType == 1) {
                     Student student;
-                    student = Portal.getCurrentSchool().getStudentByCredentials(id,password);
+                    student = Portal.getCurrentSchool().getStudentByCredentials(id, password);
 
-                    if(student!=null){
+                    if (student != null) {
                         Portal.setCurrentStudent(student);
                         NavHostFragment.findNavController(LoginFragment.this)
                                 .navigate(R.id.action_LoginFragment_to_StudentFragment);
-                    }else {
-                        Snackbar.make(view,"Kullanıcı bulunamadı",Snackbar.LENGTH_SHORT).show();
+                    } else {
+                        Snackbar.make(view, "Kullanıcı bulunamadı", Snackbar.LENGTH_SHORT).show();
                     }
-                }else if(loginType==2){
+                } else if (loginType == 2) {
                     Teacher teacher;
-                    teacher = Portal.getCurrentSchool().getTeacherByCredentials(id,password);
+                    teacher = Portal.getCurrentSchool().getTeacherByCredentials(id, password);
 
-                    if(teacher!=null){
+                    if (teacher != null) {
                         Portal.setCurrentTeacher(teacher);
                         NavHostFragment.findNavController(LoginFragment.this)
                                 .navigate(R.id.action_LoginFragment_to_TeacherFragment);
-                    }else {
-                        Snackbar.make(view,"Kullanıcı bulunamadı",Snackbar.LENGTH_SHORT).show();
+                    } else {
+                        Snackbar.make(view, "Kullanıcı bulunamadı", Snackbar.LENGTH_SHORT).show();
                     }
 
                 }

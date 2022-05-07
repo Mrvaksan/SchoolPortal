@@ -1,4 +1,5 @@
 package com.app.schoolportal;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,6 @@ import com.app.schoolportal.databinding.FragmentNonattendanceBinding;
 import com.app.schoolportal.logic.Portal;
 import com.app.schoolportal.logic.Student;
 import com.app.schoolportal.logic.Teacher;
-import com.google.android.material.snackbar.Snackbar;
 
 public class NonAttendanceFragment extends Fragment {
 
@@ -38,11 +38,11 @@ public class NonAttendanceFragment extends Fragment {
             public void onClick(View v) {
                 int nonattendance;
 
-                Teacher teacher=Portal.getCurrentTeacher();
-                Student student=Portal.getCurrentStudent();
+                Teacher teacher = Portal.getCurrentTeacher();
+                Student student = Portal.getCurrentStudent();
 
                 nonattendance = Integer.parseInt(binding.editTextStudentNonAttendance.getText().toString());
-                teacher.changeStudentNonAttendance(student,nonattendance);
+                teacher.changeStudentNonAttendance(student, nonattendance);
                 NavHostFragment.findNavController(NonAttendanceFragment.this).navigateUp();
 
             }

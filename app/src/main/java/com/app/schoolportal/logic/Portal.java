@@ -1,7 +1,7 @@
 package com.app.schoolportal.logic;
 
 public class Portal {
-    private static School currentSchool = new School();
+    private static final School currentSchool = new School();
     private static Student currentStudent;
     private static Teacher currentTeacher;
 
@@ -13,10 +13,12 @@ public class Portal {
         return currentStudent;
     }
 
-    public static Teacher getCurrentTeacher() { return currentTeacher; }
-
     public static void setCurrentStudent(Student currentStudent) {
         Portal.currentStudent = currentStudent;
+    }
+
+    public static Teacher getCurrentTeacher() {
+        return currentTeacher;
     }
 
     public static void setCurrentTeacher(Teacher currentTeacher) {

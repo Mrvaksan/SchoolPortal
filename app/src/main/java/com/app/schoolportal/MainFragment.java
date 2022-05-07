@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+
 import com.app.schoolportal.databinding.FragmentMainBinding;
 
 public class MainFragment extends Fragment {

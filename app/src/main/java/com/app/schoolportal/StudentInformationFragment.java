@@ -1,4 +1,5 @@
 package com.app.schoolportal;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,16 +39,16 @@ public class StudentInformationFragment extends Fragment {
             public void onClick(View v) {
 
                 int id;
-                id=Integer.parseInt(binding.editTextStudentNumber.getText().toString());
+                id = Integer.parseInt(binding.editTextStudentNumber.getText().toString());
                 Student student;
                 student = Portal.getCurrentSchool().getStudentByNumbers(id);
 
-                if(student!=null){
+                if (student != null) {
                     Portal.setCurrentStudent(student);
                     NavHostFragment.findNavController(StudentInformationFragment.this)
                             .navigate(R.id.action_StudentInformationFragment_to_ArrangementFragment);
-                }else {
-                    Snackbar.make(view,"Öğrenci bulunamadı",Snackbar.LENGTH_SHORT).show();
+                } else {
+                    Snackbar.make(view, "Öğrenci bulunamadı", Snackbar.LENGTH_SHORT).show();
                 }
 
             }

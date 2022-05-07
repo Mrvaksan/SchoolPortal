@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/MainFragment"
         android:name="com.app.schoolportal.MainFragment"
-        android:label="School Portal"
+        android:label="Okul Portalı"
         tools:layout="@layout/fragment_main">
 
         <action
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.app.schoolportal.LoginFragment"
-        android:label="@string/second_fragment_label"
+        android:label="Giriş Yap"
         tools:layout="@layout/fragment_login">
 
         <action
@@ -40,8 +40,8 @@
             app:destination="@id/StudentFragment" />
         <argument
             android:name="loginType"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
         <action
             android:id="@+id/action_LoginFragment_to_TeacherFragment"
             app:destination="@id/TeacherFragment" />
@@ -49,7 +49,7 @@
     <fragment
         android:id="@+id/StudentFragment"
         android:name="com.app.schoolportal.StudentFragment"
-        android:label="@string/second_fragment_label"
+        android:label="Öğrenci Bilgi Sistemi"
         tools:layout="@layout/fragment_student">
 
         <action
@@ -62,13 +62,13 @@
     <fragment
         android:id="@+id/TranscriptFragment"
         android:name="com.app.schoolportal.TranscriptFragment"
-        android:label="fragment_transcript"
+        android:label="Transcript"
         tools:layout="@layout/fragment_transcript" />
     <fragment
         android:id="@+id/TeacherFragment"
         android:name="com.app.schoolportal.TeacherFragment"
-        android:label="fragment_teacher"
-        tools:layout="@layout/fragment_teacher" >
+        android:label="Öğretmen Sistemi"
+        tools:layout="@layout/fragment_teacher">
         <action
             android:id="@+id/action_TeacherFragment_to_MainFragment"
             app:destination="@id/MainFragment" />
@@ -79,8 +79,8 @@
     <fragment
         android:id="@+id/StudentInformationFragment"
         android:name="com.app.schoolportal.StudentInformationFragment"
-        android:label="fragment_student_information"
-        tools:layout="@layout/fragment_student_information" >
+        android:label="Öğrenci Seç"
+        tools:layout="@layout/fragment_student_information">
         <action
             android:id="@+id/action_StudentInformationFragment_to_ArrangementFragment"
             app:destination="@id/ArrangementFragment" />
@@ -88,8 +88,8 @@
     <fragment
         android:id="@+id/ArrangementFragment"
         android:name="com.app.schoolportal.ArrangementFragment"
-        android:label="fragment_arrangement"
-        tools:layout="@layout/fragment_arrangement" >
+        android:label="Öğrenci Paneli"
+        tools:layout="@layout/fragment_arrangement">
         <action
             android:id="@+id/action_ArrangementFragment_to_TeacherFragment"
             app:destination="@id/TeacherFragment" />
@@ -106,8 +106,8 @@
     <fragment
         android:id="@+id/GradeFragment"
         android:name="com.app.schoolportal.GradeFragment"
-        android:label="fragment_grade"
-        tools:layout="@layout/fragment_grade" >
+        android:label="Not Değiştir"
+        tools:layout="@layout/fragment_grade">
         <action
             android:id="@+id/action_GradeFragment_to_ArrangementFragment"
             app:destination="@id/ArrangementFragment" />
@@ -115,8 +115,8 @@
     <fragment
         android:id="@+id/NonAttendanceFragment"
         android:name="com.app.schoolportal.NonAttendanceFragment"
-        android:label="fragment_nonattendance"
-        tools:layout="@layout/fragment_nonattendance" >
+        android:label="Devamsızlık Düzenle"
+        tools:layout="@layout/fragment_nonattendance">
         <action
             android:id="@+id/action_NonAttendanceFragment_to_ArrangementFragment"
             app:destination="@id/ArrangementFragment" />
